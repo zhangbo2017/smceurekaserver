@@ -1,0 +1,24 @@
+spring:
+    application:
+        name: SMC-Eureka-Server
+    profiles:  
+        active: dev
+server:
+    port: 8761
+---
+spring:
+    profiles: dev
+
+eureka:
+    client:
+        service-url: 
+            xxx: xxx
+
+---
+spring:
+    profiles: prod
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://101.201.102.101:8761/eureka
