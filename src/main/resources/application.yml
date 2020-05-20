@@ -10,9 +10,12 @@ spring:
     profiles: dev
 
 eureka:
+    instance: 
+        hostname: 127.0.0.1
     client:
         service-url: 
-            xxx: xxx
+            defaultZone: http://localhost:8761/eureka/
+        register-with-eureka: false
 
 ---
 spring:
@@ -20,5 +23,5 @@ spring:
 
 eureka:
     client:
-        service-url:
+        service-url:     
             defaultZone: http://101.201.102.101:8761/eureka
